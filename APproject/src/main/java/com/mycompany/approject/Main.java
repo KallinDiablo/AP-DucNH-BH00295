@@ -132,7 +132,7 @@ public class Main {
                     System.out.format("+------+----------------+--------------------------------------------+------------------------------------+----------------------------------+%n");
                     System.out.format("| ID   | Code           | Name                                       | Created At                         | Updated At                       |%n");
                     System.out.format("+------+----------------+--------------------------------------------+------------------------------------+----------------------------------+%n");
-                    for (var items : brands) {
+                    for (Brand items : brands) {
                         System.out.format(leftAlignFormat, items.getId(), items.getCode(), items.getName(), items.getCreated(), items.getUpdated());
                     }
                     System.out.format("+------+----------------+--------------------------------------------+------------------------------------+----------------------------------+%n");
@@ -251,7 +251,7 @@ public class Main {
                     System.out.format("+------+----------------+--------------------------------------------+------------------------+-------------------------+--------------------------------+-------------------+----------------------------------+----------------------------------+%n");
                     System.out.format("| ID   | Code           | Name                                       |Brand                    |Type                     |Capacity                        | Price             | Created At                       | Updated At                       |%n");
                     System.out.format("+------+----------------+--------------------------------------------+------------------------+-------------------------+--------------------------------+-------------------+----------------------------------+----------------------------------+%n");
-                    for (var items : hardwares) {
+                    for (Hardware items : hardwares) {
                         System.out.format(leftAlignFormat, items.getId(), items.getCode(), items.getName(), items.getBrand(), items.getType(), items.getCapacity(), items.getPrice(), items.getCreated(), items.getUpdated());
                     }
                     System.out.format("+------+----------------+--------------------------------------------+------------------------+-------------------------+--------------------------------+-------------------+----------------------------------+----------------------------------+%n");
@@ -339,7 +339,7 @@ public class Main {
                     AddPC.setBrand(brand);
                     AddPC.setPrice(price);
                     AddPC.setName(name);
-                    for (var item : hardwares) {
+                    for (String item : hardwares) {
                         AddPC.setHardwareList(item);
                     }
                     pc.add(AddPC);
@@ -383,7 +383,7 @@ public class Main {
                     ArrayList<PC> pcs = pc.getAll(elements);
                     System.out.format("| %-4s | %-14s | %-42s | %-23s | %-17s | %-32s | %-32s | %-50s%n", "ID", "Code", "Name", "Brand", "Price", "Created", "Updated", "Hardware");
                     System.out.format("+------+----------------+--------------------------------------------+------------------------+-------------------+----------------------------------+----------------------------------+----------------------------------------------------+%n");
-                    for (var items : pcs) {
+                    for (PC items : pcs) {
                         System.out.format("| %-4d | %-14s | %-42s | %-23s | %-17s | %-32s | %-32s | ", items.getId(), items.getCode(), items.getName(), items.getBrand(), items.getPrice(), items.getCreated(), items.getUpdated());
                         for (String hardware : items.getHardwareList()) {
                             System.out.format("%-48s | ", hardware);
@@ -419,7 +419,7 @@ public class Main {
                         FIndPC.setBrand(brand);
                         FIndPC.setPrice(price);
                         FIndPC.setName(name);
-                        for (var item : hardwares) {
+                        for (String item : hardwares) {
                             FIndPC.setHardwareList(item);
                         }
                         FIndPC.setUpdated(LocalDateTime.now());
