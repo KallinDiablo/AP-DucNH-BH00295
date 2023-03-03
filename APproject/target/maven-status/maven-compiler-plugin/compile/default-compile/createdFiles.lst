@@ -1,0 +1,4 @@
+com\mycompany\approject\ClassBase.class
+com\mycompany\approject\Operations\Operations.class
+com\mycompany\approject\Hardware.class
+com\mycompany\approject\Operations\IOperations.class
