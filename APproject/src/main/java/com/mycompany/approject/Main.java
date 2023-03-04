@@ -109,11 +109,11 @@ public class Main {
                 break;
                 case 3:
                     try {
-                    System.out.println("find Hardware by Code or name:");
+                    System.out.println("find Brand by Code or name:");
                     String CodeOrName = scanner.next();
                     Brand FindBrand = brand.findByCodeOrName(CodeOrName);
                     if (FindBrand == null) {
-                        System.out.println("Not exist the hardware");
+                        System.out.println("Not exist the brand");
                     } else {
                         String leftAlignFormat = "| %-4d | %-14s | %-41s | %-32s | %-34s |%n";
                         System.out.format("+------+----------------+--------------------------------------------+------------------------------------+----------------------------------+%n");
@@ -138,11 +138,11 @@ public class Main {
                     System.out.format("+------+----------------+--------------------------------------------+------------------------------------+----------------------------------+%n");
                     break;
                 case 5:
-                    System.out.println("find Hardware by Code or name:");
+                    System.out.println("find Brand by Code or name:");
                     String CodeOrName = scanner.next();
                     Brand FindBrand = brand.findByCodeOrName(CodeOrName);
                     if (FindBrand == null) {
-                        System.out.println("Not exist the hardware");
+                        System.out.println("Not exist the Brand");
                     } else {
                         System.out.println("Set Code:");
                         String code = scanner.next();
@@ -330,7 +330,7 @@ public class Main {
                     int num = scanner.nextInt();
                     System.out.println("Set the hardwares:");
                     ArrayList<String> hardwares = new ArrayList<>();
-                    for (int i = 0; i < num - 1; i++) {
+                    for (int i = 0; i < num; i++) {
                         String hardware = scanner.next();
                         hardwares.add(hardware);
                     }
@@ -411,7 +411,7 @@ public class Main {
                         int num = scanner.nextInt();
                         System.out.println("Set the hardwares:");
                         ArrayList<String> hardwares = new ArrayList<>();
-                        for (int i = 0; i < num - 1; i++) {
+                        for (int i = 0; i < num; i++) {
                             String hardware = scanner.next();
                             hardwares.add(hardware);
                         }
